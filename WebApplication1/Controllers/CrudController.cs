@@ -25,12 +25,12 @@ namespace WebApplication1.Controllers
             return Ok();
         }
 
-       /* [HttpPost("create")]
-        public IActionResult Create([FromQuery] string input, [FromQuery] int tempr)
-        {
-            _holder.Add(input, tempr);
-            return Ok();
-        }*/
+        /* [HttpPost("create")]
+         public IActionResult Create([FromQuery] string input, [FromQuery] int tempr)
+         {
+             _holder.Add(input, tempr);
+             return Ok();
+         }*/
 
         [HttpGet("read")]
         public IActionResult Read([FromQuery] DateTime dateFrom, [FromQuery] DateTime dateBefore)
@@ -55,7 +55,7 @@ namespace WebApplication1.Controllers
         [HttpDelete("delete")]
         public IActionResult Delete([FromQuery] DateTime dateToDelete)
         {
-            _holder.Values = _holder.Values.Where( f => f.Date != dateToDelete).ToList();
+            _holder.Values = _holder.Values.Where(f => f.Date != dateToDelete).ToList();
             return NoContent();
 
 
