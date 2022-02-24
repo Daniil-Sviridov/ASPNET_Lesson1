@@ -23,9 +23,9 @@
         }
 
         public WeatherForecast[] Get(DateTime dateFrom, DateTime dateBefore)
-        { 
-            if(dateBefore == DateTime.MinValue) dateBefore= DateTime.Now;
-            return Values.Where(f => ((f.Date >= dateFrom)&(f.Date <= dateBefore))).ToArray();
+        {
+            if (dateBefore == DateTime.MinValue) dateBefore = DateTime.Now;
+            return Values.Where(f => ((f.Date >= dateFrom) & (f.Date <= dateBefore))).ToArray();
         }
 
     }
